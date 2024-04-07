@@ -1,16 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/index.js",
-      "use": "@vercel/node",
-      "config": { "includeFiles": ["dist/**"] }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/index.js"
-    }
-  ]
+  "builds": [{ "src": "*.ts", "use": "@vercel/edge-functions-typescript" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "ignore": ["node_modules", ".gitignore", ".git"]
 }

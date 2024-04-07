@@ -9,7 +9,7 @@
     "dev": "npx nodemon",
     "lint": "npx eslint ./src --ext .ts",
     "lint:fix": "npx eslint ./src --ext .ts --fix",
-    "build": "tsc && cp .env ./build/.env",
+    "build": "tsc --noEmit && cp .env ./build/.env",
     "prod": "node ./build/index.js"
   },
   "pre-commit": [
